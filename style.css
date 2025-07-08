@@ -1,0 +1,92 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: monospace;
+}
+
+main {
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 1rem;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 4rem;
+
+    .new-task {
+      display: flex;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 12px;
+        letter-spacing: 1px;
+        font-size: 1rem;
+      }
+
+      img {
+        position: absolute;
+        top: 4px;
+        right: 2px;
+        height: calc(100% - 8px);
+        width: 32px;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.tasks {
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+
+    input {
+      appearance: none;
+      border: 2px solid black;
+      border-radius: 4px;
+      height: 16px;
+      width: 16px;
+      margin-right: 0.5rem;
+
+      &:checked {
+        background-color: gray;
+      }
+
+      &:checked + label {
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+    }
+
+    label {
+      font-size: 1.2rem;
+    }
+
+    img {
+      margin-inline-start: auto;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .item:not(:last-child) {
+    border-bottom: 1px solid gainsboro;
+  }
+}
