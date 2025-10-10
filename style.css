@@ -31,7 +31,7 @@ main {
 
       input {
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.5rem 2.5rem 0.5rem 0.5rem;
         border-radius: 12px;
         letter-spacing: 1px;
         font-size: 1rem;
@@ -44,6 +44,10 @@ main {
         height: calc(100% - 8px);
         width: 32px;
         border-radius: 12px;
+
+        &:hover {
+          cursor: pointer; 
+        }
       }
     }
   }
@@ -57,11 +61,15 @@ main {
 
     input {
       appearance: none;
+      flex-shrink: 0;
       border: 2px solid black;
       border-radius: 4px;
       height: 16px;
       width: 16px;
       margin-right: 0.5rem;
+      &:hover {
+        cursor: pointer; 
+      }
 
       &:checked {
         background-color: gray;
