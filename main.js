@@ -1,13 +1,21 @@
 const taskList = document.querySelector(".tasks");
 const newTaskInput = document.querySelector(".new-task-input");
+const submitBtn = document.querySelector(".submit");
+
 let counter = 0;
 
 newTaskInput.addEventListener("keydown", createTask);
+submitBtn.addEventListener("click", createTask);
 
 function createTask(event) {
   const value = newTaskInput.value;
 
-  if (event.key === "Enter") {
+  if (event.key === "Enter" || event.type == "click") {
+    if (value.trim() == "") {
+      newTaskInput.value = "";
+      return;
+    }
+
     const div = document.createElement("div");
     div.classList.add("item");
     taskList.appendChild(div);
