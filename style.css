@@ -55,6 +55,28 @@ main {
   }
 }
 
+.mode-toggle {
+  border: 2px solid black;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border: 2px solid blue;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+    border: 2px solid red;
+  }
+}
+
 .tasks {
   .item {
     display: flex;
