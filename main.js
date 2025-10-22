@@ -31,7 +31,7 @@ function createTask(event) {
     div.appendChild(label);
 
     const img = document.createElement("img");
-    img.src = "./assets/can_trash_icon.png";
+    img.src = "./assets/can-trash.png";
     img.alt = "Submit";
     div.appendChild(img);
 
@@ -43,3 +43,28 @@ function createTask(event) {
     newTaskInput.value = "";
   }
 }
+
+const themeToggle = document.querySelector(".theme-toggle");
+const body = document.body;
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  // Store user preference in local storage
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark-mode");
+  } else {
+    localStorage.setItem("theme", "");
+  }
+});
+
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme) {
+  body.classList.add(currentTheme);
+}
+
+// promjena boje trash-can
+// 1. minglanje s localStorage + custom event (jer ovaj koji postoji se triggera
+// na event u drugom windowu)
+// 2. dodat u toggleTheme event listener img.src = ...
