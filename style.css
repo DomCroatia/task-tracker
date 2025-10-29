@@ -24,6 +24,10 @@
   .light-off {
     display: inline-block;
   }
+
+  .item img {
+    filter: invert(1) hue-rotate(180deg);
+  }
 }
 
 .light-off {
@@ -62,6 +66,7 @@ main {
         border-radius: 12px;
         letter-spacing: 1px;
         font-size: 1rem;
+        border: 2px solid var(--border-clr);
       }
 
       button {
@@ -70,7 +75,7 @@ main {
         border: none;
         position: absolute;
         top: 4px;
-        right: 2px;
+        right: 4px;
         border-radius: 12px;
         overflow: hidden;
 

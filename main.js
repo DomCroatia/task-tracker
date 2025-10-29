@@ -63,8 +63,3 @@ const currentTheme = localStorage.getItem("theme");
 if (currentTheme) {
   body.classList.add(currentTheme);
 }
-
-// promjena boje trash-can
-// 1. minglanje s localStorage + custom event (jer ovaj koji postoji se triggera
-// na event u drugom windowu)
-// 2. dodat u toggleTheme event listener img.src = ...
