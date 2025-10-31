@@ -31,7 +31,7 @@ function createTask(event) {
     div.appendChild(label);
 
     const img = document.createElement("img");
-    img.src = "./assets/can_trash_icon.png";
+    img.src = "./assets/can-trash.png";
     img.alt = "Submit";
     div.appendChild(img);
 
@@ -42,4 +42,24 @@ function createTask(event) {
     counter++;
     newTaskInput.value = "";
   }
+}
+
+const themeToggle = document.querySelector(".theme-toggle");
+const body = document.body;
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  // Store user preference in local storage
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark-mode");
+  } else {
+    localStorage.setItem("theme", "");
+  }
+});
+
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme) {
+  body.classList.add(currentTheme);
 }
