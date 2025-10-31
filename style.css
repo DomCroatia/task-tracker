@@ -70,13 +70,14 @@ main {
       }
 
       button {
-        height: calc(100% - 8px);
-        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: none;
         position: absolute;
-        top: 4px;
+        top: 3px;
         right: 4px;
-        border-radius: 12px;
+        border-radius: 10px;
         overflow: hidden;
 
         &:hover {
