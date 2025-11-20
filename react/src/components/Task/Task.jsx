@@ -27,5 +27,3 @@ function Task({ task, deleteTask, toggleCompleted }) {
 }
 
 export default Task;
-
-// 3. :checked style

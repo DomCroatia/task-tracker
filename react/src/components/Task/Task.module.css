@@ -3,20 +3,28 @@
   align-items: center;
   padding: 0.25rem 0;
 
-  &:not(:last-child) {
-    border-bottom: 2px solid gray;
+  label {
+    font-size: 1rem;
   }
 
-  label {
-    padding-right: 0.5rem;
+  &:not(:last-child) {
+    border-bottom: 2px solid gray;
   }
 }
 
 .input {
   margin-right: 0.5rem;
+
+  &:checked + label {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
 }
 
 .button {
+  height: 25px;
+  width: 25px;
+  flex-shrink: 0;
   background-color: transparent;
   margin-left: auto;
 
