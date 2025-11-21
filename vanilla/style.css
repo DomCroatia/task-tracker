@@ -69,6 +69,7 @@ main {
       height: 16px;
       width: 16px;
       margin-right: 0.5rem;
+
       &:hover {
         cursor: pointer;
       }
